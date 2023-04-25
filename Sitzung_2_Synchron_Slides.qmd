@@ -1,0 +1,205 @@
+---
+title: "Vorlesung"
+subtitle: "Einführung in qualitative und quantitative Forschungsmethoden"
+author: "Samuel Merk"
+format: 
+  revealjs:
+    auto-stretch: false
+    title-slide-attributes:
+      data-background-image: img/sash.svg
+      data-background-size: 30%
+      data-background-position: 0 0
+    slide-number: true
+    preview-links: false
+    pdf-separate-fragments: true
+    controls: true
+    logo: img/PHlogo.svg
+    theme: [simple, css/custom.scss]
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 3
+      buttons: true
+      chalk-effect: 0
+    fullscreen: true
+    pdfexport: true
+bibliography: references.bib
+csl: apa.csl
+---
+## Heutige Sitzung {.smaller}
+<br>
+[{{< fa brain >}}]{.imp} Aktivierung Ihres Vorwissens
+
+[{{< fa down-long >}}]{.imp} Vertiefung: Interne Validität & Randomisierung
+
+[{{< fa book-open >}} Digitales Lesen & Wortschatz]{style="padding-left:80px; font-size:.8em;"}  
+
+[{{< fa dumbbell >}}]{.imp} Übung: Interne Validität
+
+[{{< fa book-open >}} Green Spaces & Cognitive Development]{style="padding-left:80px; font-size:.8em;"}  
+
+[{{< fa down-long >}}]{.imp} Vertiefung: Externe Validität & Zufallsstichproben  
+
+[{{< fa book-open >}} Marshmallow Effect]{style="padding-left:80px; font-size:.8em;"}  
+
+[{{< fa dumbbell >}}]{.imp} Übung: Erkenntnisinteresse von Studien
+
+[{{< fa book-open >}} Lehramtsstudium ohne Digitalkompetenz?]{style="padding-left:80px; font-size:.8em;"}  
+
+[{{< fa circle-question >}}]{.imp} Ihre Fragen
+
+```{r hidden chunk which creates template stuff}
+#| echo: false
+
+## in terminal ########
+# quarto install extension quarto-ext/fontawesome
+# quarto install extension schochastics/academicons
+#
+
+########################
+library(fontawesome)
+library(tidyverse)
+
+# Change css to lecker PH green
+if(!dir.exists("img"))
+dir.create("img")
+if(!dir.exists("css"))
+dir.create("css")
+fileConn<-file("css/custom.scss")
+writeLines(c("/*-- scss:defaults --*/",
+             "$link-color: #8cd000 !default;"), fileConn)
+close(fileConn)
+
+# create sash with URL
+sash <- 
+  ggplot() + 
+  geom_polygon(data = tibble(x = c(0,4,5.5,0),
+                             y = c(1,5,5,-.5)),
+               aes(x,y), fill = "#8cd000") + 
+  coord_fixed() +
+  annotate(geom = "text", 
+           label = " www.bit.ly/merk088", 
+           x = .8, y = .8, 
+           angle = 45,
+           hjust = 0, vjust = 0,
+           size = 10,
+           color = "white") +
+ theme_void() + 
+ theme(plot.margin = margin(-2,0,0,-12, unit = "cm"))
+ggsave("img/sash.svg", sash)
+```
+
+```{css}
+.callout-title {background-color: #8cd000 !important;}
+
+.imp {
+  color: #8cd000;
+}
+
+.em08{
+  font-size: .8em;
+}
+.em07{
+  font-size: .7em;
+}
+
+.em15{
+  font-size: 1.5em;
+}
+
+
+figure>figcaption {
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.citation {
+  font-size: .8em;
+  color: #8cd000;
+}
+
+
+.timevis.html-widget .vis-background .vis-minor.vis-odd {
+  background: #8CD00030;
+  }
+  
+.vis-text {
+  color: #ffffff !important;
+  }
+  
+.vis-timeline {
+  border: transparent;
+  }
+  
+.vis-item {
+  border-color: #8CD000; 
+  background-color: #8CD000; 
+  color: #ffffff !important;
+}
+
+
+
+.vis-current-time {
+  background-color: #8CD00000;
+}
+  
+```
+
+## {{< fa brain >}} Aktivierung Ihres Vorwissens! {.center}
+
+Bearbeiten Sie die Lernkarten auf [https://bit.ly/merk094 {{< fa square-up-right >}}](https://bit.ly/merk094)
+
+
+## {{< fa down-long >}} Vertiefung: Interne Val. & Random. {.smaller .center}
+> Bitte lesen Sie den Presseartikel auf  [https://bit.ly/merk095 {{< fa square-up-right >}}](https://bit.ly/merk095)
+
+::: {.r-stack}
+![](img/digiLesen-7.png){.fragment width="100%" fig-align="center"}
+
+![](img/digiLesen-6.png){.fragment width="100%" fig-align="center"}
+
+![](img/digiLesen-5.png){.fragment width="100%" fig-align="center"}
+
+![](img/digiLesen-4.png){.fragment width="100%" fig-align="center"}
+
+![](img/digiLesen-3.png){.fragment width="100%" fig-align="center"}
+
+![](img/digiLesen-2.png){.fragment width="100%" fig-align="center"}
+
+![](img/digiLesen.png){.fragment width="100%" fig-align="center"}
+:::
+
+. . . 
+
+[{{< fa comments >}}]{.imp} Wiederholen Sie diese Erklärungen für die geringe interne Validität und den Effekt einer Randomisierung von DL gegenüber Ihrer Sitzpartnerin. 
+
+
+##  {{< fa dumbbell >}} Übung: Interne Val. II. {.smaller}
+![Artikel im Guardian [@association2015] zur Studie von @dadvand2015.](img/Green_Spaces_Guardian2.png){width=60%}
+
+. . .
+
+[{{< fa comments >}}]{.imp} Diskutieren Sie die interne Validität dieser Studie mit Ihrer Sitzpartnerin. 
+```{r}
+#library(countdown)
+#countdown(minutes = 3, 
+#          seconds = 00,
+#          color_running_background = "#8cd000",
+#          color_background = "#ffffff",
+#          color_running_text = "#ffffff",
+#          color_text = "#8cd000",
+#          color_finished_background = "#d77d00",
+#          left = 0, right = 0
+#          )
+```
+
+## {{< fa down-long >}} Vertiefung: Ext. Val. & Zufallsstichpr. {.center}
+<br><center>
+{{< video https://vimeo.com/31597897 title="»The Marshmallow Experiment«" height="400" width="700">}}  
+[@watts2018]
+</center>
+
+
+## Literatur
+<style>
+div.callout {border-left-color: #8cd000 !important;
+</style>

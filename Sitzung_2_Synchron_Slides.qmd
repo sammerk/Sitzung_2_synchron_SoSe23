@@ -5,6 +5,7 @@ author: "Samuel Merk"
 format: 
   revealjs:
     auto-stretch: false
+    self-contained: true
     title-slide-attributes:
       data-background-image: img/sash.svg
       data-background-size: 30%
@@ -15,11 +16,6 @@ format:
     controls: true
     logo: img/PHlogo.svg
     theme: [simple, css/custom.scss]
-    chalkboard:
-      theme: whiteboard
-      boardmarker-width: 3
-      buttons: true
-      chalk-effect: 0
     fullscreen: true
     pdfexport: true
 bibliography: references.bib
@@ -189,15 +185,13 @@ Bearbeiten Sie die Lernkarten auf [https://bit.ly/merk094 {{< fa square-up-right
 [{{< fa comments >}}]{.imp} Diskutieren Sie die interne Validität dieser Studie mit Ihrer Sitzpartnerin. 
 
 
-
-
-## {{< fa down-long >}} Vertiefung: Ext. Val. & Zufallsstichpr. {.center}
+## {{< fa down-long >}} Vertiefung: Ext. Val. & {.center}
 <br><center>
 {{< video https://vimeo.com/31597897 title="»The Marshmallow Experiment«" height="400" width="700">}}  
 [@watts2018]
 </center>
 
-
+### [Test]{style="color:#8cd000;"}
 
 
 ## {{< fa down-long >}} Vertiefung: Ext. Val. & Zufallsstichpr. {.center}

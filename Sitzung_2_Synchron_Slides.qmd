@@ -73,7 +73,7 @@ sash <-
                aes(x,y), fill = "#8cd000") + 
   coord_fixed() +
   annotate(geom = "text", 
-           label = " www.bit.ly/merk088", 
+           label = " ", 
            x = .8, y = .8, 
            angle = 45,
            hjust = 0, vjust = 0,
@@ -190,8 +190,6 @@ Bearbeiten Sie die Lernkarten auf [https://bit.ly/merk094 {{< fa square-up-right
 {{< video https://vimeo.com/31597897 title="»The Marshmallow Experiment«" height="400" width="700">}}  
 [@watts2018]
 </center>
-
-### [Test]{style="color:#8cd000;"}
 
 
 ## {{< fa down-long >}} Vertiefung: Ext. Val. & Zufallsstichpr. {.center}

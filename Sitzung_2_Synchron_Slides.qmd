@@ -217,6 +217,21 @@ image(qrencode_raster("https://bit.ly/merk006"),
       xlab="", ylab="", bg = 'transparent')
 ```
 
+## Auslosung
+```{r}
+#| echo: true
+
+library(tidyverse)
+set.seed(2505)
+source("https://soscisurvey.ph-karlsruhe.de/FOME23/?act=kgcQZxRcN5int46JCEkJYbDm&rScript")
+
+# Reihenfolge: amazon, KA, KA, KA, KA
+ds |> 
+  filter(BG02 == "Ja. Ich bin damit einverstanden, dass meine anonymisierten Antworten und Moodle-Nutzungsdaten unter den beschriebenen Bedingungen für wissenschaftliche Zwecke verwendet werden.") |> 
+  sample_n(5) |> 
+  mutate(`Gewinnercodes (ohne die letzten drei Stellen)` = substr(ZG03_01, 1, 9)) |> 
+  dplyr::select(`Gewinnercodes (ohne die letzten drei Stellen)`)
+```
 
 
 ## Literatur

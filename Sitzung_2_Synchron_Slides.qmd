@@ -9,7 +9,7 @@ format:
       data-background-image: img/sash.svg
       data-background-size: 30%
       data-background-position: 0 0
-    slide-number: true
+    slide-number: false
     preview-links: false
     pdf-separate-fragments: true
     controls: true
@@ -144,13 +144,21 @@ figure>figcaption {
   
 ```
 
+
+
+
 ## {{< fa brain >}} Aktivierung Ihres Vorwissens! {.center}
 
 Bearbeiten Sie die Lernkarten auf [https://bit.ly/merk094 {{< fa square-up-right >}}](https://bit.ly/merk094)
 
 
+
+
+
 ## {{< fa down-long >}} Vertiefung: Interne Val. & Random. {.smaller .center}
-> Bitte lesen Sie den Presseartikel auf  [https://bit.ly/merk095 {{< fa square-up-right >}}](https://bit.ly/merk095)
+<br>
+
+[{{< fa book-open >}}]{.imp} Bitte lesen Sie den Presseartikel auf  [https://bit.ly/merk095 {{< fa square-up-right >}}](https://bit.ly/merk095)
 
 ::: {.r-stack}
 ![](img/digiLesen-7.png){.fragment width="100%" fig-align="center"}
@@ -173,30 +181,50 @@ Bearbeiten Sie die Lernkarten auf [https://bit.ly/merk094 {{< fa square-up-right
 [{{< fa comments >}}]{.imp} Wiederholen Sie diese Erklärungen für die geringe interne Validität und den Effekt einer Randomisierung von DL gegenüber Ihrer Sitzpartnerin. 
 
 
-##  {{< fa dumbbell >}} Übung: Interne Val. II. {.smaller}
-![Artikel im Guardian [@association2015] zur Studie von @dadvand2015.](img/Green_Spaces_Guardian2.png){width=60%}
+##  {{< fa dumbbell >}} Übung: Interne Val. II. {.center}
+![Artikel im Guardian [-@association2015] zur Studie von [@dadvand2015].](img/Green_Spaces_Guardian2.png){width=60%}
 
 . . .
 
 [{{< fa comments >}}]{.imp} Diskutieren Sie die interne Validität dieser Studie mit Ihrer Sitzpartnerin. 
-```{r}
-#library(countdown)
-#countdown(minutes = 3, 
-#          seconds = 00,
-#          color_running_background = "#8cd000",
-#          color_background = "#ffffff",
-#          color_running_text = "#ffffff",
-#          color_text = "#8cd000",
-#          color_finished_background = "#d77d00",
-#          left = 0, right = 0
-#          )
-```
+
+
+
 
 ## {{< fa down-long >}} Vertiefung: Ext. Val. & Zufallsstichpr. {.center}
 <br><center>
 {{< video https://vimeo.com/31597897 title="»The Marshmallow Experiment«" height="400" width="700">}}  
 [@watts2018]
 </center>
+
+
+
+
+## {{< fa down-long >}} Vertiefung: Ext. Val. & Zufallsstichpr. {.center}
+![Potentieller Wirkmechanismus](img/Marshmallow.png){width=80%}
+
+
+
+##  {{< fa dumbbell >}} Übung: Erkenntnisinteresse {.center .smaller}
+![Artikel im Spiegel [-@spiegel2021] zur Studie von @dadvand2015.](img/Digitalkompetenz.png){width=90%}
+
+. . .
+
+[{{< fa comments >}}]{.imp} Lesen Sie den Artikel unter [https://bit.ly/merk021 {{< fa square-up-right >}}](https://bit.ly/merk021). Welches Erkenntnisinteresse (deskriptiv/exploratov/explanativ) verfolgt die Studie mit welchem Design (Querschnitt/Längsschnitt/Trendstudie)? Inwiefern rechtfertigt dies die Empfehlungen im letzten Absatz?
+
+
+
+## Ihre Fragen zu Video & Aufgaben
+
+Bitte stellen Sie unter [https://bit.ly/merk006 {{< fa square-up-right >}}](https://bit.ly/merk006) Ihre Fragen zu Video und Aufgaben. Klicken Sie dazu auf »Q & A«.<br><br>
+```{r, out.width="70%", fig.align='center', echo = F, message = F}
+library(qrencoder)
+par(mar=c(0,0,0,0))
+image(qrencode_raster("https://bit.ly/merk006"), 
+      asp=1, col=c("#00000000", "#62DC3A"), axes=FALSE, 
+      xlab="", ylab="", bg = 'transparent')
+```
+
 
 
 ## Literatur

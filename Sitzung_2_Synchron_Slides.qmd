@@ -29,9 +29,7 @@ csl: apa.csl
 
 [{{< fa book-open >}} Digitales Lesen & Wortschatz]{style="padding-left:80px; font-size:.8em;"}  
 
-[{{< fa dumbbell >}}]{.imp} Übung: Interne Validität
-
-[{{< fa book-open >}} Green Spaces & Cognitive Development]{style="padding-left:80px; font-size:.8em;"}  
+[{{< fa lightbulb >}} Alltagsmythen vs. int. Validität]{style="padding-left:80px; font-size:.8em;"}  
 
 [{{< fa down-long >}}]{.imp} Vertiefung: Externe Validität & Zufallsstichproben  
 
@@ -143,9 +141,13 @@ figure>figcaption {
 
 
 
-## {{< fa brain >}} Aktivierung Ihres Vorwissens! {.center}
+## {{< fa brain >}} Aktivierung Ihres Vorwissens! {.center .smaller}
 
-Bearbeiten Sie die Lernkarten auf [https://bit.ly/merk094 {{< fa square-up-right >}}](https://bit.ly/merk094)
+> Bei Herrn Pfeiffer haben Sie anhand von Speichermodellen gelernt, dass neues Wissen besonders gut gelernt wird, wenn es mit Vorwissen vernetzt {{< fa diagram-project >}} werden kann.
+
+. . .
+
+> Aktivieren Sie deshalb bitte Ihr Vorwissen indem Sie (alleine oder im Partnerinterview) die Lernkarten unter [https://bit.ly/merk094 {{< fa square-up-right >}}](https://bit.ly/merk094) bearbeiten.
 
 
 
@@ -154,8 +156,11 @@ Bearbeiten Sie die Lernkarten auf [https://bit.ly/merk094 {{< fa square-up-right
 ## {{< fa down-long >}} Vertiefung: Interne Val. & Random. {.smaller .center}
 <br>
 
-[{{< fa book-open >}}]{.imp} Bitte lesen Sie den Presseartikel auf  [https://bit.ly/merk095 {{< fa square-up-right >}}](https://bit.ly/merk095)
+[{{< fa book-open >}}]{.imp} Bitte lesen Sie den Presseartikel auf  [https://bit.ly/merk095 {{< fa square-up-right >}}](https://bit.ly/merk095) und bewerten Sie die interne Validität der Schlussfolgerung.
 
+. . .
+
+#### Erklärung für geringe int. Validität (Konfundierung)
 ::: {.r-stack}
 ![](img/digiLesen-7.png){.fragment width="100%" fig-align="center"}
 
@@ -172,9 +177,17 @@ Bearbeiten Sie die Lernkarten auf [https://bit.ly/merk094 {{< fa square-up-right
 ![](img/digiLesen.png){.fragment width="100%" fig-align="center"}
 :::
 
-. . . 
+[[{{< fa comments >}}]{.imp} Wiederholen Sie diese Erklärungen für die geringe interne Validität und den Effekt einer Randomisierung von DL gegenüber Ihrer Sitzpartnerin.]{.fragment}
 
-[{{< fa comments >}}]{.imp} Wiederholen Sie diese Erklärungen für die geringe interne Validität und den Effekt einer Randomisierung von DL gegenüber Ihrer Sitzpartnerin. 
+
+## {{< fa dumbbell >}} Übung: Interne Val. II. Alltagsmythen {.center}
+Effekte und Verzerrungen die Alltagsmythen entstehen lassen bzw. die interne Validität von Aussagen senken sind u.a.
+
+::: {.incremental}
+* Positive Testing [@klayman1987]
+* Regression zur Mitte [@barnett2005]
+* Erwartungseffekte [@rosenthal1963]
+:::
 
 
 ##  {{< fa dumbbell >}} Übung: Interne Val. II. {.center}
@@ -217,21 +230,7 @@ image(qrencode_raster("https://bit.ly/merk006"),
       xlab="", ylab="", bg = 'transparent')
 ```
 
-## Auslosung
-```{r}
-#| echo: true
 
-library(tidyverse)
-set.seed(2505)
-source("https://soscisurvey.ph-karlsruhe.de/FOME23/?act=kgcQZxRcN5int46JCEkJYbDm&rScript")
-
-# Reihenfolge: amazon, KA, KA, KA, KA
-ds |> 
-  filter(BG02 == "Ja. Ich bin damit einverstanden, dass meine anonymisierten Antworten und Moodle-Nutzungsdaten unter den beschriebenen Bedingungen für wissenschaftliche Zwecke verwendet werden.") |> 
-  sample_n(5) |> 
-  mutate(`Gewinnercodes (ohne die letzten drei Stellen)` = substr(ZG03_01, 1, 9)) |> 
-  dplyr::select(`Gewinnercodes (ohne die letzten drei Stellen)`)
-```
 
 
 ## Literatur
